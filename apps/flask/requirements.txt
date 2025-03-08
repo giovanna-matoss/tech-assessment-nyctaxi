@@ -1,0 +1,4 @@
+confluent_kafka
+python-dotenv==1.0.1
+flask
+flask_sse

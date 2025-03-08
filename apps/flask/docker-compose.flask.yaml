@@ -1,0 +1,21 @@
+services:
+  redis:
+    image: redis:latest
+    container_name: redis_sse
+    ports:
+      - "6379:6379"
+    restart: always
+
+  flask_sse:
+    build: .
+    container_name: flask_sse
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+    volumes:
+      - ./src/producers:/app/producers
+      - ./src/data:/app/data
+

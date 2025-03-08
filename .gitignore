@@ -1,0 +1,26 @@
+# Ignorar arquivos de ambiente
+config/env
+config/logging
+
+# Ignorar arquivos gerados
+__pycache__/
+*.py[cod]
+
+# Ignorar logs do Airflow
+apps/airflow/logs/
+
+# Ignorar arquivos relacionados ao Docker
+.dockerignore
+*.env
+docker-compose.override.yml
+
+# Ignorar arquivos do Kafka
+apps/kafka/docker-compose.kafkav1.yaml
+
+# Ignorar arquivos de anotação
+tools.txt
+
+# Ignorar diretórios específicos
+docs/imgs/
+src/data
+ta-taxi/
