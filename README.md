@@ -75,7 +75,7 @@
 
 A arquitetura proposta para a solução pode ser visualizada logo abaixo:
 
-![Imagem da arquitetura da solução planejada realizado através do app.diagrams.net](docs\tech-assessment-nyc-taxi-architecture.jpg)
+![Imagem da arquitetura da solução planejada realizado através do app.diagrams.net](docs/tech-assessment-nyc-taxi-architecture.jpg)
 
 ### *Infraestrutura*
 Pensando na utilização dos serviços de forma padronizada (quanto às versões, por exemplo) e garantindo a replicação do ambiente, foi definido o Docker e Docker Compose para realização do deploy de cada serviço.
