@@ -84,7 +84,7 @@ Pensando na utilização dos serviços de forma padronizada (quanto às versões
 #### *Producers*
 Foram implementadas duas possibilidades para a solução de produção e consumo dos eventos, a primeira abordagem sendo mais complexa e escalável com Kafka, enquanto a segunda foi utilizando a recomendação com o Flask-SSE, pela facilitação na implementação.
 
-Durante a configuração do Kafka foram enfrentados erros relacionados ao LISTENER e a comunicação com a porta 9092, no momento de criação do tópico.
+Durante a configuração do Kafka foram enfrentados erros relacionados ao LISTENER e comunicação com broker, no momento de criação do tópico, possuindo IP e porta inacessíveis.
 
 Na segunda abordagem, no entanto, foram encontrados problemas com limitação de hardware/memória no momento de mapeamento do volume do que seriam os dados brutos (`train.csv`), durante os testes com Flask-SSE.
 
@@ -124,13 +124,13 @@ Além disso, podem ser executados outros comandos utilizando o Makefile para dis
 
 ### PRÓXIMOS PASSOS E MELHORIAS
 #### *1. Correção dos problemas com Kafka e/ou Flask-SSE*
-* Investigar possibilidade de liberar acesso ao IP em específico utilizado pelo Kafka;
-* Alterar de forma balanceada a alocação de recursos de hardware pelo Flask-SSE e demais serviços que utilizam muita memória, principalmente.
+* Investigar e solucionar problema de conexão com broker do Kafka;
+* Alterar, de forma balanceada, a alocação de recursos utilizados pelo Flask-SSE e Airflow, principalmente.
 
 #### *2. Melhorias no processamento e consultas*
-* Otimização na ingestão no MinIO para melhorar eficiência;
-* Criação de consultas analíticas com o PySpark.
+* Criação de consultas analíticas com o PySpark para simular consultas batch.
 
 #### *3. Testes e validação final*
-* Executar o fluxo completo em um ambiente com melhor capacidade;
-* Possivelmente ajustar pipelines do Airflow conforme testes e mapeamento de necessidade.
+* Inclusão de testes unitários;
+* Execução do fluxo completo em um ambiente com melhor capacidade;
+* Possivelmente incluir ajustes nas pipelines do Airflow, conforme testes e mapeamento de necessidade.
