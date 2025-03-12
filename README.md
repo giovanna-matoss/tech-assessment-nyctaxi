@@ -11,7 +11,7 @@
 * Armazenamento dos resultados em formato **parquet** e/ou **delta lake**.
 
 
-### Pontos considerados relevantes da entrega
+### Pontos considerados relevantes do desafio
 * Incluir testes unitários;
 
 * Realizar desenho da solução;
